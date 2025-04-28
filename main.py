@@ -1,6 +1,14 @@
-sentence = input()
-if len(sentence) > 3 and "Я" in sentence:
-    print("Долго, о себе")
-elif len(sentence) == 3 or "Я" in sentence:
-    print("Коротко, о себе")  
-# Perfectamente!
+username = input()
+if 3<=len(username)<=10 and \
+    username.isalpha() and \
+    username[0].isupper() and \
+    username[1:].islower():
+    print("Correct")
+elif len(username) < 3 or len(username) > 10:
+    print("Incorrect length")
+elif not username.isalpha():
+    print("Not only letters")  
+elif not useranme[0].isupper():
+    print("First letter")
+elif not username[1:].islower():
+    print("Not all small")             
