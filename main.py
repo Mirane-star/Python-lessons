@@ -1,14 +1,12 @@
-username = input()
-if 3<=len(username)<=10 and \
-    username.isalpha() and \
-    username[0].isupper() and \
-    username[1:].islower():
-    print("Correct")
-elif len(username) < 3 or len(username) > 10:
-    print("Incorrect length")
-elif not username.isalpha():
-    print("Not only letters")  
-elif not useranme[0].isupper():
-    print("First letter")
-elif not username[1:].islower():
-    print("Not all small")             
+total = 0
+print("-----------КАССА----------")
+while True:
+    text = input("Price: ")
+    if text.lower() == "stop":
+        break
+    if not text.isnumeric():
+        print("Incorrect price. ")
+        continue
+    price = int(text)
+    total += price
+print(total)
